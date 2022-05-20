@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  border:rgb(223, 14, 230) 5px solid; 
+  
+  
+  height: 100vh;
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.scanning {
+  color: rgb(255, 255, 255);
+  letter-spacing: 2px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+
+}
+
+.scanning::before {
+  content: "Scanning...";
+  color: rgb(0, 247, 255);
+  position: absolute;
+  left: 0;
+  right: 0;
+  border: 2px solid rgb(223, 14, 230);
+  box-shadow: 0px 0px 29px;
+  text-indent: 10px;
+  width: 0;
+  overflow: hidden;
+  animation: scanning 6s cubic-bezier(0.5, 0, 0.7, 0.2);
+
+}
+
+@keyframes scanning {
+  0%,
+  100% {
+    width: 0;
+  }
+
+  10%,
+  30% {
+    width: 42%;
+  }
+
+  10%,
+  80% {
+    width: 100%;
+  }
+}
